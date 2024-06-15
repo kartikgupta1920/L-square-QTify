@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HomePage from "./pages/HomePage";
+import AlbumPage from "./pages/AlbumPage";
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <App />,
+    Children: [
+      {
+      path: "/",
+      element: <HomePage />,
+      },
+      {
+        path: "/album/:albumId",
+        element: <AlbumPage />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function
