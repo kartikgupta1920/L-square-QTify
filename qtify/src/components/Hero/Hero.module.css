@@ -6,4 +6,10 @@
     align-items: center;
     text-align: center;
     gap: 30px;
+    
+}
+h1{
+    color: var(--color-white);
+    font-family: Poppins;
+    
 }

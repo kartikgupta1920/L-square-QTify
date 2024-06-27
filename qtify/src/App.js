@@ -5,6 +5,7 @@ import './App.css';
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import Navbar from "./components/Navbar/Navbar";
 // import { Outlet } from "react-router-dom";
+import Hero from './components/Hero/Hero';
 
 function App() {
   // const [data, setdata] = useState({});
@@ -28,6 +29,7 @@ function App() {
     <>
       <StyledEngineProvider injectFirst>
         <Navbar  />  
+        <Hero/>
         {/* searchData={[...topAlbums, ...newAlbums]} */}
         {/* <Outlet context={{ data: { topAlbums, newAlbums, songs } }} /> */}
       </StyledEngineProvider>
